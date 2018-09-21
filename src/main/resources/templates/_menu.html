@@ -1,0 +1,15 @@
+
+<nav class="navbar navbar-expand-sm bg-info navbar-dark"
+	xmlns:th="http://www.thymeleaf.org">
+	<ul class="navbar-nav">
+		<li class="nav-item active"><a class="nav-link" th:href="@{/}">Home</a>
+		</li>
+		<li class="nav-item active"><a class="nav-link" th:href="@{/userInfo}">User
+				Info</a></li>
+		<li class="nav-item active"><a class="nav-link" th:href="@{/admin}">Admin</a>
+		</li>
+		<li class="nav-item active"><a class="nav-link"
+			th:if="${#request.userPrincipal != null}" th:href="@{/logout}">Logout</a>
+		</li>
+	</ul>
+</nav>
